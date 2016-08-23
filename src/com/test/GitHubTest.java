@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
+import com.pojo.GitHubUser;
 import com.utils.RestUtils;
 
 public class GitHubTest extends BaseApiTest {
@@ -14,7 +15,7 @@ public class GitHubTest extends BaseApiTest {
 	@BeforeClass
 	public void beforeClass() {
 		restUtil = new RestUtils();
-		restUtil.getRequest("users/whiteboxhub");
+		restUtil.getRequestGitHubUser("users/whiteboxhub");
 	}
 
 	@Test

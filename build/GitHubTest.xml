@@ -5,6 +5,7 @@
 	<test name="GitHubTest">
 	<classes>
 		<class name="com.test.GitHubTest"></class>
+		<class name="com.test.GitHubUsersTest"></class>
 	</classes>
 	</test>
 </suite>

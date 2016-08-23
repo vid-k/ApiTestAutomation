@@ -4,6 +4,7 @@
   <test name="GitHubTest">
     <classes>
       <class name="com.test.GitHubTest"/>
+      <class name="com.test.GitHubUsersTest"/>
     </classes>
   </test> <!-- GitHubTest -->
 </suite> <!-- Failed suite [GitHubTestSuite] -->

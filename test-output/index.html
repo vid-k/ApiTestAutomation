@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,16 @@
                       <a href="#" panel-name="suite-GitHubTestSuite" class="show-methods passed suite-GitHubTestSuite"> (show)</a> <!-- show-methods passed suite-GitHubTestSuite -->
                     </span>
                     <div class="method-list-content passed suite-GitHubTestSuite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-GitHubTestSuite" title="com.test.GitHubUsersTest" hash-for-method="testIsLoginPresent">testIsLoginPresent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-GitHubTestSuite" title="com.test.GitHubUsersTest" hash-for-method="testIsTypeOrganization">testIsTypeOrganization</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-GitHubTestSuite" title="com.test.GitHubTest" hash-for-method="testLoginId">testLoginId</a> <!-- method navigator-link -->
@@ -113,6 +123,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-GitHubTestSuite" title="com.test.GitHubTest" hash-for-method="testStatusCode">testStatusCode</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-GitHubTestSuite" title="com.test.GitHubUsersTest" hash-for-method="testStatusCode">testStatusCode</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-GitHubTestSuite -->
@@ -129,6 +144,35 @@
         <div panel-name="suite-RestApiTest" class="panel RestApiTest">
         </div> <!-- panel RestApiTest -->
         <div panel-name="suite-GitHubTestSuite" class="panel GitHubTestSuite">
+          <div class="suite-GitHubTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.test.GitHubUsersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIsLoginPresent">
+                  </a> <!-- testIsLoginPresent -->
+                  <span class="method-name">testIsLoginPresent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIsTypeOrganization">
+                  </a> <!-- testIsTypeOrganization -->
+                  <span class="method-name">testIsTypeOrganization</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testStatusCode">
+                  </a> <!-- testStatusCode -->
+                  <span class="method-name">testStatusCode</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-GitHubTestSuite-class-passed -->
           <div class="suite-GitHubTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -187,6 +231,7 @@
   &lt;test name=&quot;GitHubTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.test.GitHubTest&quot;/&gt;
+      &lt;class name=&quot;com.test.GitHubUsersTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- GitHubTest --&gt;
 &lt;/suite&gt; &lt;!-- GitHubTestSuite --&gt;
@@ -209,7 +254,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">GitHubTest (1 class)</span>
+                <span class="test-name">GitHubTest (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -266,24 +311,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLoginId')
 data.setCell(0, 2, 'com.test.GitHubTest')
-data.setCell(0, 3, 23);
+data.setCell(0, 3, 17);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testStatusCode')
+data.setCell(1, 1, 'testLoginName')
 data.setCell(1, 2, 'com.test.GitHubTest')
-data.setCell(1, 3, 6);
+data.setCell(1, 3, 7);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testLoginName')
-data.setCell(2, 2, 'com.test.GitHubTest')
-data.setCell(2, 3, 3);
+data.setCell(2, 1, 'testIsTypeOrganization')
+data.setCell(2, 2, 'com.test.GitHubUsersTest')
+data.setCell(2, 3, 5);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testStatusCode')
+data.setCell(3, 2, 'com.test.GitHubTest')
+data.setCell(3, 3, 4);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testIsLoginPresent')
+data.setCell(4, 2, 'com.test.GitHubUsersTest')
+data.setCell(4, 3, 3);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testStatusCode')
+data.setCell(5, 2, 'com.test.GitHubUsersTest')
+data.setCell(5, 3, 1);
 window.suiteTableData['GitHubTestSuite']= { tableData: data, tableDiv: 'times-div-GitHubTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 ms</span>
+              <span class="suite-total-time">Total running time: 37 ms</span>
               <div id="times-div-GitHubTestSuite">
               </div> <!-- times-div-GitHubTestSuite -->
             </div> <!-- times-div -->
@@ -337,23 +394,45 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">66 ms</span>
+                <span class="method-start">64 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testLoginId</span>
-                <span class="method-start">2810 ms</span>
+                <span class="method-start">2795 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testLoginName</span>
-                <span class="method-start">2840 ms</span>
+                <span class="method-start">2822 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testStatusCode</span>
-                <span class="method-start">2849 ms</span>
+                <span class="method-start">2832 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.test.GitHubUsersTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">2844 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testIsLoginPresent</span>
+                <span class="method-start">3569 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIsTypeOrganization</span>
+                <span class="method-start">3573 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testStatusCode</span>
+                <span class="method-start">3580 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.test.GitHubTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">2906 ms</span>
+                <span class="method-start">3629 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
