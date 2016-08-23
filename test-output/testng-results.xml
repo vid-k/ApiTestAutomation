@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RestApiTest" duration-ms="0" started-at="2016-08-23T04:30:38Z" finished-at="2016-08-23T04:30:38Z">
+    <groups>
+    </groups>
+  </suite> <!-- RestApiTest -->
+  <suite name="GitHubTestSuite" duration-ms="2838" started-at="2016-08-23T04:30:35Z" finished-at="2016-08-23T04:30:38Z">
+    <groups>
+    </groups>
+    <test name="GitHubTest" duration-ms="2838" started-at="2016-08-23T04:30:35Z" finished-at="2016-08-23T04:30:38Z">
+      <class name="com.test.GitHubTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test.GitHubTest@6a2bcfcb]" name="beforeSuite" is-config="true" duration-ms="32" started-at="2016-08-22T21:30:35Z" finished-at="2016-08-22T21:30:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.GitHubTest@6a2bcfcb]" name="beforeClass" is-config="true" duration-ms="2737" started-at="2016-08-22T21:30:35Z" finished-at="2016-08-22T21:30:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testLoginId()[pri:0, instance:com.test.GitHubTest@6a2bcfcb]" name="testLoginId" duration-ms="23" started-at="2016-08-22T21:30:38Z" finished-at="2016-08-22T21:30:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginId -->
+        <test-method status="PASS" signature="testLoginName()[pri:0, instance:com.test.GitHubTest@6a2bcfcb]" name="testLoginName" duration-ms="3" started-at="2016-08-22T21:30:38Z" finished-at="2016-08-22T21:30:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginName -->
+        <test-method status="PASS" signature="testStatusCode()[pri:0, instance:com.test.GitHubTest@6a2bcfcb]" name="testStatusCode" duration-ms="6" started-at="2016-08-22T21:30:38Z" finished-at="2016-08-22T21:30:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStatusCode -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test.GitHubTest@6a2bcfcb]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-08-22T21:30:38Z" finished-at="2016-08-22T21:30:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.test.GitHubTest -->
+    </test> <!-- GitHubTest -->
+  </suite> <!-- GitHubTestSuite -->
+</testng-results>
