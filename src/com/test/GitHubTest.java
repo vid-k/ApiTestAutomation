@@ -1,21 +1,21 @@
 package com.test;
 
 import org.apache.http.HttpStatus;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.Assert;
 
 import com.pojo.GitHubUser;
-import com.utils.RestUtils;
+import com.utils.RestUtilsGitHubUser;
 
 public class GitHubTest extends BaseApiTest {
 
-	RestUtils restUtil;
+	RestUtilsGitHubUser restUtil;
 
 	@BeforeClass
 	public void beforeClass() {
-		restUtil = new RestUtils();
-		restUtil.getRequestGitHubUser("users/whiteboxhub");
+		restUtil = new RestUtilsGitHubUser();
+		restUtil.getRequestGitHubUser("users/whiteboxhub", GitHubUser.class);
 	}
 
 	@Test
@@ -25,12 +25,12 @@ public class GitHubTest extends BaseApiTest {
 
 	@Test
 	public void testLoginId() {
-		Assert.assertEquals(restUtil.getUser().getId(), "4023110");
+		Assert.assertEquals(restUtil.getGitHubUser().getId(), "4023110");
 	}
 
 	@Test
 	public void testLoginName() {
-		Assert.assertEquals(restUtil.getUser().getName(), "WBL-Training");
+		Assert.assertEquals(restUtil.getGitHubUser().getName(), "WBL-Training");
 	}
 
 }

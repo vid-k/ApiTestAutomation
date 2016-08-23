@@ -13,7 +13,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 
 import com.pojo.GitHubUser;
 
-public class RestUtils {
+public class RestUtilsGitHubUser {
 
 	HttpUriRequest request;
 	HttpResponse response;
@@ -21,15 +21,20 @@ public class RestUtils {
 	List<GitHubUser> users;
 	String URI = Configuration.githubUrl;
 
-	public void getRequestGitHubUser(String resourceUrl) {
+
+	public <X> void getRequestGitHubUser(String resourceUrl, Class<X> cl) {
 		this.request = new HttpGet(URI+resourceUrl);
 		this.request.addHeader(HttpHeaders.CONTENT_TYPE, "application/json");
 		try {
 			this.response = HttpClientBuilder.create().build().execute(request);
-			setUser(ResourceUtils.retrieveResource(response, GitHubUser.class));
-			
+		
 			if (null != response) {
-
+				if (cl.equals(GitHubUser.class))
+					setUser(ResourceUtils.retrieveResource(response, cl));
+				else if (cl.equals(GitHubUser[].class)) {
+					List<GitHubUser> users = ResourceUtils.retrieveResources(response, GitHubUser[].class);
+					setGitHubUsers(users);				
+				}
 			} else
 				System.out.println("Something went wrong with GET, response is: " + response);
 		} catch (ClientProtocolException e) {
@@ -38,45 +43,25 @@ public class RestUtils {
 			e.printStackTrace();
 		}
 	}
-
-	public void getRequestGitHubUsers(String resourceUrl) {
-		this.request = new HttpGet(URI+resourceUrl);
-		this.request.addHeader(HttpHeaders.CONTENT_TYPE, "application/json");
-		try {
-			this.response = HttpClientBuilder.create().build().execute(request);
-			List<GitHubUser> users = ResourceUtils.retrieveResources(response, GitHubUser[].class);
-			setUsers(users);
-			
-			if (null != response) {
-
-			} else
-				System.out.println("Something went wrong with GET, response is: " + response);
-		} catch (ClientProtocolException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	
-	public GitHubUser getUser() {
+		
+	public GitHubUser getGitHubUser() {
 		return this.user;
 	}
 
-	public GitHubUser getUser(int n) {
+	public GitHubUser getGitHubUser(int n) {
 		return users.get(n);
 	}
 	
-	public void setUser(GitHubUser user) {
-		this.user = user;
+	public <X> void setUser(X user) {
+		this.user = (GitHubUser) user;
 	}
 
-	public List<GitHubUser> getUsers() {
+	public List<GitHubUser> getGitHubUsers() {
 		return this.users;
 	}
 	
-	public void setUsers(List<GitHubUser> users) {
-		this.users = users;
+	public <X> void setGitHubUsers(List<X> users) {
+		this.users = (List<GitHubUser>) users;
 	}
 	
 	public int getStatusCode() {

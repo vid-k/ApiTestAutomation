@@ -8,7 +8,6 @@ import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.util.EntityUtils;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.type.TypeReference;
 
 import com.pojo.GitHubUser;
 
@@ -34,10 +33,10 @@ public class ResourceUtils {
 	}
 
 	
-	public static <X>List<X> retrieveResources(HttpResponse response, Class<X[]> cl) {
+	public static <X> List<X> retrieveResources(HttpResponse response, Class<X[]> cl) {
 
 		String json;
-
+		System.out.println(cl.toString());
 		try {
 			json = EntityUtils.toString(response.getEntity());
 
